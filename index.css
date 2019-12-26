@@ -1,0 +1,127 @@
+
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+/* Button used to open the chat form - fixed at the bottom of the page */
+.open-button {
+  background-color: #555;
+  color: white;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  bottom: 23px;
+  border-radius: 50%
+}
+
+.open-button.user-a {
+    right: 28px;
+}
+
+.open-button.user-b {
+    left: 10px;
+}
+
+/* The popup chat - hidden by default */
+.chat-popup {
+  display: none;
+  position: fixed;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+  bottom: 21px;
+  width: 200px;
+}
+
+.chat-popup h1 {
+    margin: 5px;
+}
+
+.message-list {
+    min-height: 200px;
+    margin: 0;
+    margin-bottom: 43px;
+    background-color: black;
+    max-height: 350px;
+    overflow: auto;
+    list-style: none;
+    padding: 0;
+}
+
+.message {
+    max-width: 80%;
+    min-width: 80%;
+    /* background: white; */
+    color: white;
+    border: 1px solid;
+    padding: 5px 0;
+    margin: 5px 0;
+    cursor: pointer;
+}
+
+.message.right {
+    float: left;
+}
+
+.message.left {
+    float: right;
+    text-align: right;
+}
+
+.message.delete {
+    text-decoration: line-through;
+}
+
+
+
+.chat-popup.user-a {
+    right: 80px;
+}
+
+.chat-popup.user-b {
+    left: 64px;
+}
+
+/* Add styles to the form container */
+.form-container {
+  background-color: #9c7979;
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Full-width textarea */
+.form-container input {
+  padding: 15px;
+  border: none;
+  background: #f1f1f1;
+  resize: none;
+  flex: 1;
+}
+
+/* When the textarea gets focus, do something */
+.form-container inout:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/send button */
+.form-container .btn {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}

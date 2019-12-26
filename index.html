@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="index.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div>
+        <!-- Chat Window user A    // -->
+        <button class="open-button user-a" onclick="openForm('user-a')">Chat</button>
+        <div class="chat-popup user-a" id="myForm-user-a">
+            <h1>Chat</h1>
+            <ul id="messages-user-a" class="message-list"></ul>
+            <form class="form-container" onsubmit="sendMsg(event, 'user-a', 'user-b')">
+                <input placeholder="Type message.." name="msg" required></input>
+
+                <button type="submit" class="btn">Send</button>
+                <!-- <button type="button" class="btn cancel" onclick="closeForm('user-a')">Close</button> -->
+            </form>
+        </div>
+
+        <!-- Chat Window user B    // -->
+        <button class="open-button user-b" onclick="openForm('user-b')">Chat</button>
+        <div class="chat-popup user-b" id="myForm-user-b">
+            <h1>Chat</h1>
+            <ul id="messages-user-b" class="message-list"></ul>
+            <form class="form-container" onsubmit="sendMsg(event, 'user-b', 'user-a')">
+                <input placeholder="Type message.." name="msg" required></input>
+                <button type="submit" class="btn">Send</button>
+                <!-- <button type="button" class="btn cancel" onclick="closeForm('user-b')">Close</button> -->
+            </form>
+        </div>
+
+
+</body>
+<script src="message.js"></script>
+<script src="index.js"></script>
+
+</html>
